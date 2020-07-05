@@ -61,6 +61,8 @@ body{
 }
 .letters_box{
     display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .letter_box_item{
     margin: .5em;
@@ -119,3 +121,9 @@ body{
     width: fit-content;
     cursor: pointer;
 }
+
+/* @media(max-width: 800px){
+    .password_box {
+        font-size: 24px;
+    }
+} */
