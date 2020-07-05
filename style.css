@@ -1,0 +1,121 @@
+body{
+    background-color: #a5a9aa;
+}
+
+.moves{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+}
+.moves_counter{
+    margin: 0;
+    font-weight: 600;
+    padding-left: 1em;
+}
+
+.gallows{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin: 5vh 0;
+}
+.gallows_item{
+    position: absolute;
+    clip-path: url(#clipping);
+    width: 50vh;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.gallows_item--full{
+    opacity: .5;
+}
+.gallows_item--path{
+    clip: rect( auto auto 0vh auto);
+    transition: .3s ease;
+}
+
+.password{
+    text-align: center;
+}
+.password_box{
+    display: inline-flex;
+    margin: 3vh 0;
+    padding: 1.5em;
+    border: 1px solid #000;
+    font-size: 18px;
+}
+.password_box_item{
+    width: 12px;
+    height: 20px;
+    margin: .5em;
+    padding: 0 2px;
+    border-bottom: 1px solid #000;
+}
+
+.letters{
+    text-align: center;
+}
+.letters_box{
+    display: inline-flex;
+}
+.letter_box_item{
+    margin: .5em;
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid;
+    padding: .1em;
+    width: 30px;
+    outline: none;
+}
+.letter_box_item:disabled{
+    cursor: default;
+}
+.letter_box_item:focus{
+    cursor: default;
+    border: 1px solid;
+}
+
+.score_container{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.score_bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.score_content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #a5a9aa;
+    border: 1px solid;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em;
+    min-width: 50%;
+}
+.score_content h3{
+    font-size: 46px;
+}
+.score_content p{
+    font-size: 18px;
+    padding: 1em;
+    border: 1px solid;
+    width: fit-content;
+    cursor: pointer;
+}
